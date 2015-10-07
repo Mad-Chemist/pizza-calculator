@@ -43,7 +43,9 @@ var PizzaCalculator = function(passedOptions) {
 		};
 
 	obj.options = {};
-	obj.options = passedOptions;
+	if (passedOptions) {
+		jQuery.extend(obj.options, passedOptions);
+	}
 	obj.initialize();
 
 	return obj;
